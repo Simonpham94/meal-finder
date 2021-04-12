@@ -159,7 +159,7 @@ mealsEl.addEventListener('click', (e)=>{
     //         return false;
     //     }   
     // })
-    const mealInfo = e.path.find(function returnItemWithClass(item){
+    const mealInfo = e.composedPath().find(function returnItemWithClass(item){
         if(item.classList) {
             return item.classList.contains('meal-info');     
         } else {
