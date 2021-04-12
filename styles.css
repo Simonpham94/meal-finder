@@ -22,6 +22,7 @@ body {
 
 .flex {
   display: flex;
+  min-height: 34px;
 }
 
 input[type='text'] {
@@ -32,8 +33,8 @@ input[type='text'] {
   cursor: pointer;
 }
 
-.btn:active{
-  transform: scale(.98);
+.btn:active {
+  transform: scale(0.98);
 }
 
 input,
@@ -61,7 +62,7 @@ input,
 
 /* API style */
 
-.meals{
+.meals {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -69,15 +70,14 @@ input,
   margin-top: 20px;
 }
 
-.meal{
-  width: 200px; 
+.meal {
+  width: 200px;
   height: 200px;
   position: relative;
   border: 4px solid #fff;
-  
 }
 
-.meal img{
+.meal img {
   width: 100%;
   height: 100%;
 }
@@ -93,10 +93,10 @@ input,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   letter-spacing: 1px;
   opacity: 0;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
   text-align: center;
 }
 
@@ -104,21 +104,18 @@ input,
   opacity: 1;
 }
 
-
-.single-recipe{
+.single-recipe {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.single-recipe h1{
+.single-recipe h1 {
   text-align: center;
   margin: 30px 0;
 }
 
-
-
-.single-recipe img{
+.single-recipe img {
   width: 300px;
   border: 4px solid #fff;
 }
@@ -131,7 +128,7 @@ input,
   text-align: center;
 }
 
-.main{
+.main {
   max-width: 800px;
   font-size: 18px;
   letter-spacing: 1px;
@@ -140,11 +137,11 @@ input,
   padding: 10px 50px;
 }
 
-.main h2{
+.main h2 {
   text-align: center;
 }
 
-.main ul{
+.main ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -153,7 +150,7 @@ input,
   width: 100%;
 }
 
-.main li{
+.main li {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -174,15 +171,14 @@ input,
   left: 0;
   right: 0;
   bottom: 0;
-  animation: modalopen .5s;
-  
+  animation: modalopen 0.5s;
 }
 
-.modal-container.show{
+.modal-container.show {
   display: block;
 }
 
-.modal{
+.modal {
   background: #dedede;
   position: absolute;
   top: 50%;
@@ -192,16 +188,15 @@ input,
   height: auto;
   width: 70%;
   color: #143c4e;
-  
 }
 
-.modal-body{
+.modal-body {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
 
 .modal-body li {
-  color: #fff; 
+  color: #fff;
   background-color: #445760;
 }
 
@@ -217,31 +212,27 @@ input,
 
 @keyframes modalopen {
   from {
-      opacity: 0;
+    opacity: 0;
   }
-  to{
-      opacity: 1;
+  to {
+    opacity: 1;
   }
 }
-
 
 @media (max-width: 800px) {
   .meals {
     grid-template-columns: repeat(3, 1fr);
   }
-  
 }
 
 @media (max-width: 700px) {
   .meals {
     grid-template-columns: repeat(2, 1fr);
   }
-  
 }
 
 @media (max-width: 550px) {
-
-  input[type='text']{
+  input[type='text'] {
     width: 200px;
   }
 
@@ -253,19 +244,17 @@ input,
     grid-template-columns: 1fr;
   }
 
-  .meal{
-    width: 300px; 
+  .meal {
+    width: 300px;
     height: 300px;
-    
-    
   }
 
-  .modal{
+  .modal {
     width: 100%;
     height: 70%;
   }
 
-  .single-meal-info{
+  .single-meal-info {
     border: dashed #84a4b3 2px;
     border-radius: 5px;
     margin: 20px 0;
@@ -275,6 +264,4 @@ input,
   .btn-close {
     display: none;
   }
-
-  
 }

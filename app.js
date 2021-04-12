@@ -24,7 +24,7 @@ function searchMeal(e) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 resultHeading.innerHTML = `<h2>Search results for "${term}":</h2>`;
 
                 if(data.meals === null) {
@@ -152,7 +152,14 @@ random.addEventListener('click', getRandomMeal);
 mealsEl.addEventListener('click', (e)=>{
     modal.classList.add('show');
 
-    const mealInfo = e.path.find(item => {
+    // const mealInfo = e.path.find(item => {
+    //     if(item.classList) {
+    //         return item.classList.contains('meal-info');     
+    //     } else {
+    //         return false;
+    //     }   
+    // })
+    const mealInfo = e.path.find(function (item){
         if(item.classList) {
             return item.classList.contains('meal-info');     
         } else {
